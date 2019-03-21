@@ -22,3 +22,7 @@ p, ul, ol, dl, address {
 p, li, dd, dt, address {
   line-height: 1.5;
 }
+/* 文字斜体样式 */
+p.italic {
+  font-style: italic;
+}
