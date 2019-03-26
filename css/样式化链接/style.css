@@ -20,29 +20,49 @@ a {
 /* 权重；来源：读者声明、创作人员声明、用户代理；特殊性：ID 选择器、内联样式 */
 /* 链接伪类正确顺序： link-visited-focus-hover-active */
 /* 速记：LoVe Fears HAte */
-a:link {
+.link-basic a:link , .link-img a:link{
   color: #399; /* 链接未访问颜色 */
 }
 
-a:visited {
+.link-basic a:visited , .link-img a:visited{
   color: #a33; /* 链接已访问颜色 */
 }
 
 /* 链接被选中，使用 Tab 键或其他方法选中 */
-a:focus {
+.link-basic a:focus {
   background: #669;
   color: #fff;
 }
 
 /* 鼠标悬停链接样式 */
-a:hover {
+.link-basic a:hover {
   background: #666;
   color: white;
 }
 
-
 /* 连接被激活 */
-a:active {
+.link-basic a:active {
   color: white;
   background: #265301;
 }
+
+/* 在链接中包含图片 --开始*/
+.link-img a[href*="http"] {
+  background: url("https://mdn.mozillademos.org/files/12982/external-link-52.png") no-repeat 100% 0;
+  background-size: 16px 16px;
+  padding-right: 19px;
+}
+
+.link-img a:focus {
+  color: red;
+}
+
+.link-img a:hover {
+  color: #265301;
+}
+
+.link-img a:active {
+  color: #999;
+}
+/* 在链接中包含图片 --结束*/
+
