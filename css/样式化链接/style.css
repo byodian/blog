@@ -1,0 +1,48 @@
+/* 一般样式 字体 */
+html {
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 10px;
+}
+
+p {
+  font-size: 1.5rem;
+  line-height: 1.5;
+}
+
+/* 链接基本样式 */
+a {
+  text-decoration: none;
+  outline: none;
+  padding: 2px 1px 0 1px;
+}
+
+/* 在选择器权重、来源和特殊性相同的情况下，样式表中的规则会按照顺序排序，后面的规则会胜出 */
+/* 权重；来源：读者声明、创作人员声明、用户代理；特殊性：ID 选择器、内联样式 */
+/* 链接伪类正确顺序： link-visited-focus-hover-active */
+/* 速记：LoVe Fears HAte */
+a:link {
+  color: #399; /* 链接未访问颜色 */
+}
+
+a:visited {
+  color: #a33; /* 链接已访问颜色 */
+}
+
+/* 链接被选中，使用 Tab 键或其他方法选中 */
+a:focus {
+  background: #669;
+  color: #fff;
+}
+
+/* 鼠标悬停链接样式 */
+a:hover {
+  background: #666;
+  color: white;
+}
+
+
+/* 连接被激活 */
+a:active {
+  color: white;
+  background: #265301;
+}
