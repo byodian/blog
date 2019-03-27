@@ -1,7 +1,7 @@
 ---
-name: issue 模板
-about: 学习前端开发过程中遇到的问题
-title: 简单概述遇到的问题
+name: issue template
+about: 学习中发现的疑难点
+title: 概述问题
 labels: ''
 assignees: byodian
 
