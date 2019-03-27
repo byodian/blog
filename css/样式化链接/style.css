@@ -70,6 +70,7 @@ a {
 ul {
   margin: 0;
   padding: 0;
+  font-size: 0; /* 消除 inline-block 元素间的留白间距 ，该间距的存在是因为代码中有换行或空格的存在 */
   width: 100%;
 }
 
@@ -79,7 +80,7 @@ ul li {
 
 li a {
   display: inline-block;
-  width: 18.5%;
+  width: 19.5%;
   margin-right: 0.625%;
   font-size: 1.5rem;
   line-height: 3;
