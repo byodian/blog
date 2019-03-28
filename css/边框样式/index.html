@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>边框样式</title>
+  <style>
+    div {
+      width: 420px;
+      padding: 20px;
+      margin: 0 auto;
+      line-height: 3;
+      background-color: red;
+      text-align: center;
+      color: white;
+      /* border image */
+      border: 20px solid yellow;
+      background-clip: padding-box;
+      border-image-source: url("border-image.png");
+      border-image-slice: 40;
+      border-image-repeat: round;
+    }
+    p  {
+      /* border-color 默认为元素字体颜色 */
+      border-style: solid;
+    }
+  </style>
+</head>
+<body>
+  <div>
+    <p>border image</p>
+  </div>
+</body>
+</html>
