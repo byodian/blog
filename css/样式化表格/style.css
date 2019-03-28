@@ -1,0 +1,89 @@
+/* spacing */
+table {
+  table-layout: fixed;
+  font-size: 15px;
+  width: 100%;
+  border-collapse: collapse;
+  border: 3px solid purple;
+}
+
+thead th:nth-child(1) {
+  width: 30%;
+}
+
+thead th:nth-child(2) {
+  width: 20%;
+}
+
+thead th:nth-child(3) {
+  width: 15%;
+}
+
+thead th:nth-child(4) {
+  width: 35%;
+}
+
+th , td {
+  padding: 20px;
+}
+
+/* typography */
+
+html {
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+thead th, tfoot th {
+  font-family:  cursive , 'Rock Salt';
+}
+
+th {
+  letter-spacing: 2px;
+}
+
+td {
+  letter-spacing: 1px;
+}
+
+tbody td {
+  text-align: center;
+}
+
+tfoot th {
+  text-align: right;
+}
+
+/* 图形和颜色 */
+
+thead , tfoot {
+  background-image: url("leopardskin.jpg");
+  color: white; 
+}
+
+tbody tr:nth-child(odd) { 
+  background-color: #a66; 
+}
+
+tbody tr:nth-child(even) { 
+  background-color: #ccc; 
+}
+
+tbody tr {
+  background-image: url("noise.png");
+}
+
+thead th , tfoot th {
+  border-right: 3px solid purple;
+}
+
+/* 标题样式化 */
+
+caption {
+  font-family: 'Rock Salt', cursive;
+  font-style: italic;
+  letter-spacing: 2px;
+  padding: 20px;
+  caption-side: bottom;
+  text-align: right;
+  color: #666;
+}
