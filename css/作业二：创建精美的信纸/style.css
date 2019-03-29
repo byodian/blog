@@ -41,8 +41,8 @@ h1 {
 /* background iamges , border */
 
 article {
-  background: url("image/top-image.png") no-repeat top;
-  background: url("image/top-image.png") no-repeat top,
+  background: url("image/top-image.png") no-repeat left top;
+  background: url("image/top-image.png") no-repeat left top,
               url("image/bottom-image.png") no-repeat bottom,
               linear-gradient(to bottom, rgba(0,0,0,.2) 10%, rgba(0,0,0,0) 20%, rgba(0,0,0,0) 80%, rgba(0,0,0,.2));
   background-color: white;
