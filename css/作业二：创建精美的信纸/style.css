@@ -38,18 +38,23 @@ h1 {
   text-shadow: 1px 1px 1px black;
 }
 
+/* background iamges , border */
+
 article {
+  background: url("image/top-image.png") no-repeat top;
   background: url("image/top-image.png") no-repeat top,
               url("image/bottom-image.png") no-repeat bottom,
-              linear-gradient(to bottom, rgba(255,255,255,.8) 10%, white 20% , rgba(255,255,255,.5) 90%);
-  border-right: 2px solid black;
-  border-left: 2px solid black;
+              linear-gradient(to bottom, rgba(0,0,0,.2) 10%, rgba(0,0,0,0) 20%, rgba(0,0,0,0) 80%, rgba(0,0,0,.2));
+  background-color: white;
   border-top: 1mm solid red;
   border-bottom: 1mm solid red;
 }
 
 h1 {
   background-image: url("image/logo.png");
-  -webkit-filter: drop-shadow(1px 1px 1px black);
-  filter: drop-shadow(1px 1px 1px black);
+  /* -webkit-filter: drop-shadow(1px 1px 1px black);
+  filter: drop-shadow(1px 1px 1px black); */
+  /* 此种方法设置块阴影，具有跨浏览器兼容性 */
+  border-radius: 64px;
+  box-shadow: 1px 1px 1px black;
 }
