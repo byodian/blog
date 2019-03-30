@@ -1,0 +1,37 @@
+/* 
+* 左右两边固定宽度，中间自适应
+* 双飞翼前面部分同圣杯布局
+* 双飞翼用 div 将中间适应包裹起来，利用子 div 的 margin 来给左右元素留出空间 
+*/
+
+.container {
+  overflow: hidden;
+}
+
+.center-container {
+  width: 100%;
+  float: left;
+}
+
+.center-container .center {
+  height: 150px;
+  background-color: #d66;
+  margin-left: 100px;
+  margin-right: 200px;
+}
+
+.left {
+  float: left;
+  width: 100px;
+  height: 150px;
+  background-color: #dd0;
+  margin-left: -100%;
+}
+
+.right {
+  float: left;
+  width: 200px;
+  height: 150px;
+  background-color: #0dd;
+  margin-left: -200px;
+}
