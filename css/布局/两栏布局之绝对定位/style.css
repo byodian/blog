@@ -1,0 +1,22 @@
+/* 
+* 两栏布局之绝对定位
+* 左边固定宽度，右边自适应
+* 设置左边绝对定位
+*/
+
+.container {
+  position: relative;
+}
+
+.left {
+  position: absolute;
+  width: 100px;
+  height: 150px;
+  background-color: #f00;
+}
+
+.right {
+  height: 150px;
+  margin-left: 100px;
+  background-color: #00f;
+}
