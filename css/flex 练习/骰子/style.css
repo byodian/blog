@@ -1,10 +1,12 @@
-.first-face .column {
+.first-face  {
+  display: flex;
   justify-content: center;
   align-items: center;
 }
 
-.second-face .column,
-.third-face .column {
+.second-face ,
+.third-face {
+  display: flex;
   justify-content: space-between;
 }
 
@@ -20,11 +22,18 @@
   align-self: flex-end;
 }
 
+.fourth-face,
+.fifth-face,
+.sixth-face { 
+  display: flex; 
+  justify-content: space-between;
+}
+
 .fourth-face .column,
 .fifth-face .column,
 .sixth-face .column {
+  display: flex;
   flex-direction: column;
-  flex-wrap: wrap;
   justify-content: space-between;
 }
 
@@ -42,10 +51,9 @@
   align-items: flex-end;
 }
 
+/* 使用属性选择器*/
 
-
-.container {
-  display: flex;
+[class$=face] {
   width: 104px;
   height: 104px;
   margin: 10px;
@@ -56,11 +64,6 @@
               inset 5px 0 0 #d7d7d7,
               inset 0 -5px 0 #d7d7d7;
   border-radius: 10%;
-}
-
-.column {
-  display: flex;
-  width: 100%;
 }
 
 .item {
@@ -80,5 +83,4 @@ body {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  margin: 0;
 }
