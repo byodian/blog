@@ -1,0 +1,32 @@
+/* group general styles 
+-----------------------------------------------------*/
+
+html {
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 10px;
+}
+
+body, div, dl, dt, ul, ol, li, h1, h2, h3, h4, h5, h6, pre, code, form, fieldset, legend, input, textarea, 
+p, blockquote, th,  td {
+  margin: 0;
+  padding: 0;
+}
+
+.wrap {
+
+}
+
+/* group help styles 
+-----------------------------------------------------*/
+
+
+/* group structure styles 
+-----------------------------------------------------*/
+
+header {
+  width: 100%;
+  margin: 0 auto;
+}
+
+/* group page component 
+-----------------------------------------------------*/
