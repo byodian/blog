@@ -1,0 +1,163 @@
+/* 一般样式 */
+
+html, body {
+  height: 100%;
+}
+
+html {
+  font-family: sans-serif;
+  font-size: 10px;
+  background-color: #f9f9f9;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body, ul, ol, li, p { 
+  margin: 0; 
+  padding: 0;
+}
+
+li {
+  list-style-type: none;
+}
+
+a , a:hover {
+  color: #000;
+  text-decoration: none;
+}
+
+/* header wrap style*/
+
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  height: 58px;
+  padding: 0 160px;
+  box-shadow: 0 2px 4px rgba(0,0,0,.1);
+  background-color: #fff;
+}
+
+.navbar .navbar-left {
+  font-size: 1.4rem;
+}
+
+/* 右边导航栏样式 */
+
+.navbar .navbar-right {
+  height: 100%;
+}
+
+/*  */
+
+.navbar-right ul {
+  display: flex;
+  height: 100%;
+  align-items: center;
+}
+
+.navbar-right ul li {
+  position: relative;
+  display: flex;
+  height: 100%;
+  padding: 4px 0;
+  overflow: hidden;
+}
+
+/* 主导航栏 hover 状态 */
+
+.navbar-right ul li:hover {
+  overflow: visible;
+}
+
+/* 主导航栏链接样式 */
+
+.navbar-right li .main-nav-link {
+  display: flex;
+  height: 100%;
+  font-size: 1.6rem;
+  padding: 0 20px;
+  align-items: center;
+}
+
+/* 主导航栏链接 hover 样式 */
+.navbar-right li .main-nav-link:hover {
+  border-radius: 3px;
+  background-color: #f2f2f2;
+  color: #548;
+}
+
+.navbar-right ul .menu-item-active::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  width: 100%;
+  height: 3px;
+  background-color: #548;
+}
+
+/* 主导航栏链接下拉列表宽度设置 */
+
+.navbar-right li .dropdown-wide {
+  width: 500px;
+  max-width: 500px;
+}
+
+.navbar-right li .dropdown {
+  position: absolute;
+  top: 100%;
+  left: 0;
+  min-width: 240px;
+  padding: 10px;
+  border-radius: 3px;
+  box-shadow: 0 20px 40px rgba(0,0,0,.1);
+  background-color: #fff;
+  opacity: 0;
+  transform: translateY(30px);
+  transition: 0.2s cubic-bezier(0, 0, 0, 1);
+}
+
+.navbar-right li:hover .dropdown {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.navbar .dropdown .main-nav-sub-link {
+  display: flex;
+  font-size: 1.6rem;
+  padding: 15px;
+  font-weight: 600;
+  color: #554488;
+}
+
+.navbar .dropdown .main-nav-sub-link:hover {
+  background-color: #f2f2f2;
+  border-radius: 3px;
+}
+
+.navbar-right .dropdown .nav-label {
+  font-size: 1.5rem;
+  color: #828282;
+}
+
+.navbar-right .dropdown .link-logo {
+  height: 30px;
+  margin-top: 6px;
+  margin-right: 15px;
+}
+
+.navbar-right .dropdown .nav-text {
+  line-height: 1.5;
+  color: #000;
+}
+
+
+.navbar-right .dropdown .link-description {
+  font-size: 1.3rem;
+  font-weight: normal;
+  color: #828282;
+}

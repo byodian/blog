@@ -1,0 +1,55 @@
+/* 一般样式 */
+
+html, body {
+  height: 100%;
+}
+
+html {
+  font-family: sans-serif;
+  font-size: 10px;
+}
+
+body, ul, ol, li, p { 
+  margin: 0; 
+  padding: 0;
+}
+
+li {
+  list-style-type: none;
+}
+
+a , a:hover {
+  color: #000;
+  text-decoration: none;
+}
+
+/* 布局样式 */
+
+.navbar  {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  min-width: 768px;
+  padding: 0 80px;
+  border-bottom: 1px solid #eaeaea;
+  font-size: 1.4rem;
+  line-height: 1.5;
+  background-color: #fff;
+}
+
+.navbar .navbar-brand {
+  width: 151px;
+  height: 65px;
+  background-image: url(./img/logo.png);
+  background-repeat: no-repeat;
+  background-position: 50%;
+  background-size: contain;
+}
+
+.navbar-menu .info a {
+  padding: 8px 16px;
+  font-size: 1.5rem;
+}
+
+
+
