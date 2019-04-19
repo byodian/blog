@@ -14,24 +14,28 @@
       text-decoration: none;
     }
     ul {
+      display: flex;
+      flex-wrap: wrap;
+      align-content: center;
+      min-height: 300px;
       margin: 0;
       padding-left: 0;
       list-style: none;
-      border: 1px solid #acc;
       background-color: #acc;
-      padding: 1rem;
-      /* 去除 inline-bloack 元素间的空隙 */
-      font-size: 0;
+      padding: 1em;
     }
     ul li {
       display: inline-block;
-      font-size: 1rem;
-      margin: 1em
+      margin: .5em;
+      flex: 1 0 auto;
+      /* 设置各项目最大宽度，防止窗口缩小，项目宽度不可控制 */
+      max-width: 14em;
     }
+    
     li a {
       position: relative;
       display: block; 
-      padding: .25em;
+      padding: .25em .5em .25em .25em;
       line-height: 1.5;
       border-radius: 0 .25em .25em 0 ;
       background-color: #a66;
