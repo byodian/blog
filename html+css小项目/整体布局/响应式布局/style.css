@@ -88,11 +88,17 @@ a {
   float: left;
   min-height: 100px;
   box-sizing: border-box;
-  margin: 0 0.9% 1.375em;
+  /** 
+  * 利用 box-sizing 属性，使用内边距设置空距
+  * 空距等于文本行高
+  */
+
+  padding: 0 .6875em 1.375em;
 }
-.row {
+  /* 抵消最外层空距 */
+/* .row {
   margin: 0 -.9%;
-}
+} */
 .row::after {
   display: block;
   content: "";
