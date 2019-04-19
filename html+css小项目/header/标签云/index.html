@@ -18,35 +18,36 @@
       padding-left: 0;
       list-style: none;
       border: 1px solid #acc;
+      background-color: #acc;
       padding: 1rem;
+      /* 去除 inline-bloack 元素间的空隙 */
       font-size: 0;
     }
     ul li {
-      position: relative;
       display: inline-block;
       font-size: 1rem;
       margin: 1em
     }
     li a {
+      position: relative;
       display: block; 
-      padding: .5em;
+      padding: .25em;
       line-height: 1.5;
-      border-radius:0 4px 4px 0 ;
+      border-radius: 0 .25em .25em 0 ;
       background-color: #a66;
       text-align: center;
     }
-
-    li::before{
+    li a::before{
       position: absolute;
-      left: -2.5em;
+      top: 0;
+      left: -1.5em;
       content: "";
       display: block;
       width: 0;
       height: 0;
-      border: 1.25em solid #a66;
-      border-bottom-color: transparent;
-      border-top-color: transparent;
-      border-left-color: transparent;
+      border: 1em solid transparent;
+      border-right-width: .5em;
+      border-right-color: #a66;
     }
 
   </style>
