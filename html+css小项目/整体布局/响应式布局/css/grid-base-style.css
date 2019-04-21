@@ -1,0 +1,69 @@
+/* 一般样式 */
+body {
+  margin: 0;
+  font-family: Georgia, 'Times New Roman', Times, serif;
+  line-height: 1.375;
+}
+ul, ol, li {
+  margin: 0;
+  padding: 0;
+}
+ul {
+  list-style: none;
+}
+h1, h2, h3, h4, h5, h6 {
+  font-family: 'Avenir Next', 'Avenir', 'Franklin Gothic', 'Trebuchet MS', Arial, sans-serif;
+  margin-top: 0;
+}
+a {
+  text-decoration: none;
+}
+/* 包装元素 */
+.wrapper {
+  width: 95%;
+  max-width: 76em;
+  margin: 0 auto;
+}
+/* masthead 网站标题样式 */
+.masthead {
+  background-color:#866;
+}
+.masthead h1 {
+  margin: 0;
+  padding: .5em 0;
+  color: #fff;
+}
+/* 导航元素样式 */
+.navbar {
+  margin-bottom: 1.375em;
+  background-color: #966;
+  color: #fff;
+}
+nav {
+  display: block;
+}
+.navbar .wrapper {
+  background-color: #a66;
+}
+.navbar ul {
+  /* Flexbox  */
+  display: flex;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+.navbar li {
+  flex: 1 1 auto;
+  box-sizing: border-box;
+  text-align: center;
+  border-right: 1px solid currentColor;
+}
+.navbar li:last-child {
+  border-right: none;
+}
+.navbar li a {
+  display: block;
+  line-height: 1.5;
+  padding: 1em 2em;
+  color: #fff;
+}
