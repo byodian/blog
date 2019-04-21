@@ -80,6 +80,9 @@
   padding: .6875em;
   background-color: #eee;
 }
+.story + .story {
+  margin-top: 1.375em;
+}
 .story img {
   width: 100%;
 }
