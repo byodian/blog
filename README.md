@@ -27,9 +27,9 @@
 [articles-url]: https://github.com/byodian/blog/issues
 [update-url]: https://github.com/byodian/blog/commits/master
 [1.]: https://github.com/byodian/blog/labels/1.%20%E5%BC%80%E5%8F%91%E5%B7%A5%E5%85%B7
-[2.]: 
-[3.]: 
-[4.]:
+[2.]: https://github.com/byodian/blog/labels/2.%20%E5%9F%BA%E7%A1%80%E7%90%86%E8%AE%BA
+[3.]: https://github.com/byodian/blog/labels/3.%20%E7%BC%96%E7%A8%8B%E8%AF%AD%E8%A8%80
+[4.]: https://github.com/byodian/blog/blob/master/4.%20%E7%BC%96%E7%A8%8B%E7%BB%83%E4%B9%A0/README.md
 
 
 
