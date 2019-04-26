@@ -1,5 +1,7 @@
 # 背景与边框
 
+[CSS Backgrounds & Borders](https://www.w3.org/TR/css-backgrounds/) - 相关规范
+
 ## 1. 半透明边框
 
 ### 现象
@@ -11,6 +13,38 @@
 使用 `background-clip` 属性，初始值为 `border-box`，意为背景会被边框的外边沿（border-box）裁切掉。其他属性值：`padding-box`、`content-box`，意思分别为被 `padding-box`（内边距的外边沿）和 `content-box`（内容的外边沿）裁切掉。
 
 [试一试](https://codepen.io/byodian/pen/wZYWMM)
+
+### 2. 多重边框
+
+### 现象
+
+css3-background 还在草案阶段时，网页开发者往往使用多个元素模拟多重边框，此举增加了额外的结构污染了布局。
+
+### 解决方案
+
+1. box-shadow 方案
+
+box-shadow 第四个参数，又称扩张半径，通过设置正值或负值，可以增大或减小投影面积。当前三个参数（X偏移量、Y偏移量、模糊半径）为零时，得到的投影就是一个实线边框。
+
+另外，box-shadow 支持逗号分隔语法，因此可以创建任意数量的边框。
+
+```css
+background: yellow;
+box-shadow: 0 0 0 10px #f00,
+            0 0 0 12px #acc;
+```
+
+**注意**：box-shadow 层层叠加，最顶层的扩张半径要比内圈的扩张半径要大。比如我们想在 10px 的扩张半径边框外加一道 5px 的外框，那么就需要指定扩张半径为 15px (10px+5px)。
+
+```css
+background: yellow;
+box-shadow: 0 0 0 10px #f00,
+            0 0 0 15px #acc;
+```
+
+[试一试](https://codepen.io/byodian/pen/KYGQBV)
+
+1. outline 方案
 
 ## 颜色值
 
