@@ -74,7 +74,28 @@ outline: 5px solid #a66;
 
 ## 灵活的背景定位
 
+### 现象
+
+CSS 2.1 中，对背景图片进行定位的设置空间有限。
+
 ### 1. background-position 方案
+
+[background-position](https://developer.mozilla.org/en-US/docs/Web/CSS/background-position)
+
+在 CSS 背景与边框第三版中，`background-position` 属性得到了扩展，它允许指定背景图片的距离任意角的偏移量，只要我们在偏移量前面指定关键字。
+
+```css
+  background: url(cover.png) no-repeat #acc;
+  background-position: right 20px bottom 10px;
+```
+
+**百分数单位**
+
+- (container width - image width) * (position x%) = (x offset value)
+
+- (container height - image height) * (position y%) = (y offset value)
+
+[试一试](https://codepen.io/byodian/pen/MdwZRX?editors=1100)
 
 ### 2. background-origin 方案
 
