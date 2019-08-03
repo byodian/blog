@@ -12,10 +12,10 @@
 
 ## 目录
 
-- [1. 开发工具][1.]
-- [2. 基础理论][2.]
-- [3. 编程语言][3.]
-- [4. 编程练习][4.]
+- [1. 开发工具][1-url]
+- [2. 基础理论][2-url]
+- [3. 编程语言][3-url]
+- [4. 编程练习][4-url]
 
 
 
@@ -26,10 +26,10 @@
 [license-url]: https://creativecommons.org/licenses/by-nc-sa/4.0/deed.zh
 [articles-url]: https://github.com/byodian/blog/issues
 [update-url]: https://github.com/byodian/blog/commits/master
-[1.]: https://github.com/byodian/blog/labels/1.%20%E5%BC%80%E5%8F%91%E5%B7%A5%E5%85%B7
-[2.]: https://github.com/byodian/blog/labels/2.%20%E5%9F%BA%E7%A1%80%E7%90%86%E8%AE%BA
-[3.]: https://github.com/byodian/blog/labels/3.%20%E7%BC%96%E7%A8%8B%E8%AF%AD%E8%A8%80
-[4.]: https://github.com/byodian/blog/blob/master/4.%20%E7%BC%96%E7%A8%8B%E7%BB%83%E4%B9%A0/README.md
+[1-url]: https://github.com/byodian/blog/labels/1.%20%E5%BC%80%E5%8F%91%E5%B7%A5%E5%85%B7
+[2-url]: https://github.com/byodian/blog/labels/2.%20%E5%9F%BA%E7%A1%80%E7%90%86%E8%AE%BA
+[3-url]: https://github.com/byodian/blog/labels/3.%20%E7%BC%96%E7%A8%8B%E8%AF%AD%E8%A8%80
+[4-url]: https://github.com/byodian/blog/blob/master/4.%20%E7%BC%96%E7%A8%8B%E7%BB%83%E4%B9%A0/README.md
 
 
 
