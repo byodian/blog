@@ -1,0 +1,118 @@
+## CSS 基本排版技术
+
+### 文本颜色
+
+文本颜色是最基本的样式之一。**足够高的对比度是确保网页阅读无障碍的关键，但往往过分强调**。事实上，由于屏幕的高对比性，白底黑字会让大段文字显得过于密集，反而影响可读性。
+
+### 字体族（font-family）
+
+- 后备机制是 font-family 属性的重要特性，因为不同的操作系统和移动设备可能安装不同的字体。
+- 字体表最后的 serif 和 sans-serif 为通用字体族。
+- 如果网页要显示代码，应首选 monospace 字体族，也叫等宽字体，其每个字符的宽度都一样，不同行之间的字符可以完美对齐。
+- 字体与字型，数字排版领域，**字体**通常指一个存在某种字型字型表示的文件。**字型**也叫字体族，是一组代表字母、数字及其他统一外观样式的字形集合。
+   - 假设有一种字型叫“CSS ”，那么它可能只有一个字体文件，也可能包含多个字体文件。比如“CSS 常规”、“CSS斜体”。
+   
+
+> verdana(宋体),Helvetica(黑体);
+> serif 衬线字体 如 Time New Romans
+> sans-serif 无衬线字体 如 Arial
+> monospace  每个字符具有相同宽度的字体，通常用于代码列表
+> cursive 用于模拟笔迹的字体，具有流动的连接笔画
+> fantasy 用来装饰的字体
+
+### 字型大小
+
+- 基于比例缩放的字型大小，比如标题大小**纯四度**的比例
+- em 单位基于元素自身计算的 font-size 来计算盒模型。
+- rem 单位已得到所有浏览器的支持。
+
+###  行高、对齐和行盒子的构造
+
+#### 行内格式化模型
+
+- 行盒子（line-box）
+- 行内盒子（inline-box）
+- 匿名行内盒子
+- 内容区（font-size）
+- 基线
+- 行间距（行高）
+
+#### 设置行高和垂直对齐
+
+- 行高应设置没有单位的值，子元素会继承一个系数，永远与自身的 font-size 成比例。
+- 垂直对齐
+
+### 字体粗细
+
+- 关键字，normal、bold、bolder 和 lighter
+- 默认值 normal 对应 400，bold 对应 700
+
+### 字体样式
+
+- `font-style` 关键字 normal italic oblique
+- 大小写变换 `text-transform` 关键字 uppercase lowercase capitalize
+- 小型大写变体 `font-variant`  关键字 small-caps
+
+### 字母和单词间距（不常用）
+
+- word-spacing 
+- letter-spacing
+
+## 版心宽度、律动和毛边
+
+### 文本缩进和对齐
+
+- text-indent
+
+- text-align，关键字，left、right、center 和 justify。两端对齐可以消除毛边，但会出现**串流**现象，即文本空白构成的。使用连字符可以减轻串流的问题，`hypens` 属型较新，使用时应加上浏览器前缀。
+
+- text-decoration
+  underline | overline | line-through
+
+  - text-decoration  可以一次接受多个值
+  - text-decoration   是一个缩写形式，它由text-decoration-line,text-decoration-style,text-decoration-color 构成。
+
+- text-shadow
+  text-shadow 最多可以接受四个值，可以接受负值。
+
+- text-shadow: 4px 4px 4px red;
+
+
+1. 阴影与原始文本的水平偏移
+2. 阴影与原始文本的垂直偏移
+3. 模糊半径
+4. 阴影的基础颜色
+
+- text-align
+
+
+- line-height
+  设置文本每行之间的高，也可以设置无单位的值，作为乘数。推荐的行高大约是1.5-2（双倍行距）。
+
+- letter-spacing & word-spacing
+
+
+- text-indent
+
+
+- white-space
+  normal | pre | nowrap | pre-wrap | pre-line
+
+- word-break
+
+- strong text
+
+- word-wrap
+
+
+### 多栏文本
+
+- columns
+  - column-count
+  - column-width
+- column-gap
+- column-span
+
+## Web 字体
+
+### @font-size

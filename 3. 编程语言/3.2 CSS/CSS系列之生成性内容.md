@@ -1,0 +1,118 @@
+## ::after & ::before
+
+### 按钮点击效果
+
+[link](https://codepen.io/byodian/full/bGbwNay)
+
+```css
+<div class="wrapper">
+  <a href="#" class="btn btn--success">Discover tour</a>
+</div>
+<div class="wrapper">
+    <a href="#" class="btn btn--pass">Discover tour</a>
+</div>
+
+<div class="wrapper">
+    <a href="#" class="btn btn--waring">Discover tour</a>
+</div>
+
+html {
+  font-size: 10px;
+}
+body {
+    padding-top: 10rem;
+}
+
+.wrapper {
+  width: 80%;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.wrapper:not(:last-child) {
+    margin-bottom: 10rem;
+}
+
+.btn:link,
+.btn:visited {
+  position: relative;
+  display: inline-block;
+  padding: 1.5rem 2.5rem;
+  font-size: 1.6rem;
+  text-decoration: none;
+  box-shadow: 0 1.5rem 4rem rgba(0,0,0,.15);
+  border: none;
+  border-radius: 2rem;
+  transition: all .2s;
+}
+
+.btn:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 1.5rem 4rem rgba(0,0,0,.2);
+}
+
+.btn:active {
+  transform: translateY(-1px);
+  box-shadow: 0 1.5rem 4rem rgba(0,0,0,.25);
+}
+
+.btn::after {
+  content: "";
+  /*    
+  * 父元素同尺寸
+  */
+  width: 100%;
+  height: 100%;
+
+  /*  
+  * 定位到父元素的下面  
+  */
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: -1;
+  
+  border-radius: 2rem;
+  transition: all .4s;
+}
+
+.btn:hover::after {
+  transform: scaleX(1.7) scaleY(2);
+  opacity: 0;
+}
+
+
+.btn--success:link,
+.btn--success:visited {
+  background-color: #8E2DE2;
+  color: #fff;
+}
+
+.btn--success::after {
+    background-color: #8E2DE2;
+}
+
+.btn--pass:link,
+.btn--pass:visited {
+   background-color: #11998e;
+   color: #fff;
+}
+
+.btn--pass::after {
+    background-color: #11998e;
+}
+
+.btn--waring:link,
+.btn--waring:visited {
+   background-color: #dd3e54;
+   color: #fff;
+}
+
+.btn--waring::after {
+    background-color: #dd3e54;
+}
+```
+
+效果图
+
+![](https://raw.githubusercontent.com/byodian/logpic/master/%E6%8C%89%E9%92%AE%E7%BB%84%E4%BB%B6.png)
