@@ -5,7 +5,7 @@
   background-color: rgba($color-white, .4);
   box-shadow: 0 1.5rem 6rem rgba($color-black, .4);
   transform: skewX(-12deg);
-
+  
   @include respond(tab-port) {
     width: 100%;
     transform: skewX(0);
@@ -16,7 +16,9 @@
     width: 15rem;
     height: 15rem;
     float: left;
+    -webkit-shape-outside: circle(50% at 50% 50%);
     shape-outside: circle(50% at 50% 50%);
+    -webkit-clip-path: circle(50% at 50% 50%);
     clip-path: circle(50% at 50% 50%);
     transform: skewX(12deg);
     position: relative;
