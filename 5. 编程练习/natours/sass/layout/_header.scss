@@ -15,7 +15,7 @@
   // reponsive images in CSS
 
   @media (min-resolution: 192dpi) and (min-width: 37.5em),
-         (-webkit-min-aspect-radio: 2),
+         (-webkit-min-device-pixel-ratio: 2),
          (min-width: 125em) {
     background-image: linear-gradient(
       to right bottom,

@@ -9,7 +9,7 @@ body {
 .heading-primary {
   color: $color-white;
   text-transform: uppercase;
-  margin-bottom: 4rem;
+  margin-bottom: 6rem;
 
   &--main {
     display: block;
@@ -65,6 +65,7 @@ body {
   background-image: linear-gradient(to right, $color-primary-light, $color-primary-dark);
   display: inline-block;
   -webkit-background-clip: text;
+  background-clip: text;
   color: transparent;
   transition: all .2s;
 
