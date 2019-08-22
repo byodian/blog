@@ -473,13 +473,11 @@ body {
     float: left;
     overflow: hidden;
     transform: skewX(12deg);
-    position: relative; }
-    @supports (clip-path: polygon(0 0)) or (-webkit-clip-path: poly(0 0)) {
-      .story__shape {
-        -webkit-shape-outside: circle(50% at 50% 50%);
-        shape-outside: circle(50% at 50% 50%);
-        -webkit-clip-path: circle(50% at 50% 50%);
-        clip-path: circle(50% at 50% 50%); } }
+    position: relative;
+    -webkit-shape-outside: circle(50% at 50% 50%);
+    shape-outside: circle(50% at 50% 50%);
+    -webkit-clip-path: circle(50% at 50% 50%);
+    clip-path: circle(50% at 50% 50%); }
     @media (max-width: 56.25em) {
       .story__shape {
         transform: skewX(0); } }
@@ -840,9 +838,9 @@ body {
   background-repeat: no-repeat;
   -webkit-clip-path: polygon(0 0, 100% 0, 100% 75vh, 0 100%);
   clip-path: polygon(0 0, 100% 0, 100% 75vh, 0 100%); }
-  @media (min-resolution: 192dpi) and (min-width: 37.5em), (min-width: 125em) {
+  @media (min-resolution: 192dpi) and (min-width: 37.5em), (-webkit-min-aspect-radio: 2), (min-width: 125em) {
     .header {
-      background-image: linear-gradient(to right bottom, rgba(255, 193, 7, 0.8), rgba(255, 160, 0, 0.8)), url(../img/hero.jpg); } }
+      background-image: linear-gradient(to right bottom, rgba(85, 197, 122, 0.8), rgba(40, 180, 133, 0.8)), url(../img/hero.jpg); } }
   @media (max-width: 56.25em) {
     .header {
       -webkit-clip-path: polygon(0 0, 100% 0, 100% 85vh, 0 100%);

@@ -15,11 +15,12 @@
   // reponsive images in CSS
 
   @media (min-resolution: 192dpi) and (min-width: 37.5em),
+         (-webkit-min-aspect-radio: 2),
          (min-width: 125em) {
     background-image: linear-gradient(
       to right bottom,
-      rgba($color-secondary-light, 0.8),
-      rgba($color-secondary-dark, 0.8)),
+      rgba($color-primary-light, 0.8),
+      rgba($color-primary-dark, 0.8)),
       url(../img/hero.jpg);
   }
 
