@@ -145,9 +145,10 @@
     font-weight: 100;
   }
 
-  
+  // @include respond(tab-land) {  
+    @media only screen and (max-width: 56.25em),
+           only screen and (hover: none) { // use a device where we can not hover  
 
-  @include respond(tab-land) {  
       height: auto;
       background-color: $color-white;
       // Card Front

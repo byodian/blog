@@ -3,8 +3,9 @@
   padding: 25rem 0;
   margin-top: -20vh;
 
-  @include respond(tab-port) {
-    padding: 18rem 0;
+  @include respond(tab-land) {
+    margin-top: -10vh;
+    padding: 20rem 0;
   }
 }
 

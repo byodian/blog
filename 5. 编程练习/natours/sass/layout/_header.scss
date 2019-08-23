@@ -13,10 +13,9 @@
   clip-path: polygon(0 0, 100% 0, 100% 75vh, 0 100%);
 
   // reponsive images in CSS
-
-  @media (min-resolution: 192dpi) and (min-width: 37.5em),
-         (-webkit-min-device-pixel-ratio: 2),
-         (min-width: 125em) {
+  @media only screen and (min-resolution: 192dpi) and (min-width: 37.5em),
+         only screen and (-webkit-min-device-pixel-ratio: 2) and (min-width: 37.5em),
+         only screen and (min-width: 125em) {
     background-image: linear-gradient(
       to right bottom,
       rgba($color-primary-light, 0.8),
@@ -24,15 +23,10 @@
       url(../img/hero.jpg);
   }
 
-  @include respond(tab-port) {
-    -webkit-clip-path: polygon(0 0, 100% 0, 100% 85vh, 0 100%);
-    clip-path: polygon(0 0, 100% 0, 100% 85vh, 0 100%);
-  }
-
-  @include respond(phone) {
-    height: 75vh;
-    -webkit-clip-path: polygon(0 0, 100% 0, 100% 95vh, 0 100%);
-    clip-path: polygon(0 0, 100% 0, 100% 95vh, 0 100%);
+  @include respond(tab-land) {
+    height: 80vh;
+    -webkit-clip-path: polygon(0 0, 100% 0, 100% 75vh, 0 100%);
+    clip-path: polygon(0 0, 100% 0, 100% 75vh, 0 100%);
   }
 
   &__logo {
