@@ -1,0 +1,96 @@
+.container { 
+  max-width: 120rem;
+  margin: 10rem auto; // 水平居中对齐
+  background-color: var(--color-grey-light-1);
+  box-shadow: var(--shadow-dark);
+
+  min-height: 50rem;
+
+  @media only screen and (max-width: $bp-largest) {
+    margin: 0;
+  }
+}
+
+.header { 
+  font-size: 1.4rem;
+  height: 7rem;
+  background-color: #fff;
+  border-bottom: var(--line);
+
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+
+  @media only screen and (max-width: $bp-smallest) {
+    flex-wrap: wrap;
+    height: 11rem;
+    align-content: space-around;
+  }
+}
+
+.content { // sidebar + .hotel-view
+  display: flex; // 左右布局
+
+  @media only screen and (max-width: $bp-medium) {
+    flex-direction: column;
+  }
+}
+
+.sidebar { // 侧边栏
+  background-color: var(--color-grey-dark-1);
+
+  flex: 0 0 18%; // 侧边栏宽度占容器宽度的 18%
+
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between; 
+}
+
+.hotel-view {
+
+  background-color: #fff; 
+  flex: 1; // flex-grow: 1; 自动占据剩余空间
+}
+
+.detail {
+  display: flex;
+  justify-content: space-between;
+  padding: 4rem;
+  font-size: 1.4rem;
+  background-color: var(--color-grey-light-1);
+
+  @media only screen and (max-width: $bp-medium) {
+    padding: 2.5rem;
+  }
+
+  @media only screen and (max-width: $bp-small) {
+    flex-direction: column;
+  }
+}
+
+.description {
+  background-color: #fff;
+  flex: 0 0 60%;
+  margin-right: 4rem;
+  padding: 2.5rem;
+  box-shadow: var(--shadow-light);
+
+  @media only screen and (max-width: $bp-medium) {
+    padding: 1.5rem;
+    margin-right: 2.5rem;
+  }
+
+  @media only screen and (max-width: $bp-small) {
+    margin-right: 0;
+    margin-bottom: 1.5rem;
+  }
+}
+
+.user-reviews {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
