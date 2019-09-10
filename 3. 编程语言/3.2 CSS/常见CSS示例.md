@@ -1,4 +1,4 @@
-[TOC]
+
 
 ## 居中问题
 
@@ -84,15 +84,108 @@
 }
 ```
 
-### Flex 布局
+## 美化表单
 
-## 背景
+- `outline`
+- `border`
+- `::placeholder`
+- `:placeholder-shown`
+- `:focus`
+- `:invalid`
+- `:checked`
 
+HTML 代码：
 
+```html
 
-## 响应式图片
+<section class="section-wrapper">
+  <form action="#" class="form-wrapper">
+  <div class="box">
+    <input class="box-input box-input__name"  id="box-input__name" type="text" placeholder="Full name" required>
+    <label class="box-input__label" for="box-input__name">Full Name</label>
+  </div>
+  <div class="box">
+    <input class="box-input box-input__email"  id="box-input__email" type="email" placeholder="Email Adress" required>
+    <label class="box-input__label" for="box-input__email">Email Adress</label>
+  </div>
+    <button>submit</button>
+  </form>
+</section>
+```
 
+CSS 代码
 
+```css
+html {
+  font-size: 100%;
+}
+
+body {
+  background-color: #eee;
+}
+
+input {
+  box-sizing: border-box;
+}
+
+.form-wrapper {
+  width: 100%;
+  padding: 10em 2em;
+}
+
+.box {
+  width: 50%;
+}
+
+.box:not(:last-child) {
+  margin-bottom: 1em;
+}
+
+.box-input {
+  width: 100%;
+  display: block;
+  padding: .5em 1em;
+  border: none; 
+  border-radius: 2px;
+  outline: none;
+  font-size: inherit;
+  background-color: #fff;
+}
+
+// 设置输入框占位符样式
+// ::placeholder 伪元素
+.box-input::placeholder {
+  color: #ccc;
+  font-size: 12px;
+}
+
+.box-input__label {
+  display: block;
+  margin-top: .5em;
+  margin-left: 1em;
+  font-size: 12px; 
+  color: #999;
+  transform: translateY(0);
+  visibility: visble;
+  opacity: 1;
+  transition: all .2s;
+}
+
+.box-input:placeholder-shown + label {
+    transform: translateY(-2.5em);
+    visibility: hidden;
+    opacity: 0;
+}
+
+.box-input:focus {
+  border-bottom: 2px solid green;
+  box-shadow: 0 .2em 4em rgba(0,0,0,.1);
+}
+
+.box-input:focus:invalid {
+  border-bottom: 2px solid orange;
+}
+```
 
 
 
