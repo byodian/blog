@@ -1,4 +1,4 @@
-[Demo](https://byo-forkify.netlify.com/)
+[View Online](https://byo-forkify.netlify.com/)
 
 ### 技术
 
