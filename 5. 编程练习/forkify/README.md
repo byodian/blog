@@ -1,6 +1,6 @@
 [View Online](https://byo-forkify.netlify.com/)
 
-### 技术
+**技术**
 
 - HTML
 - CSS
