@@ -58,7 +58,7 @@ for (let node of document.body.childNodes) {
 document.body.childNodes.forEach(el => console.log(el));
 ```
 
-**注意：**DOM 集合是只读的，修改节点信息有其他的方法；DOM 集合是实时变化的。
+**注意**: DOM 集合是只读的，修改节点信息有其他的方法；DOM 集合是实时变化的。
 
 ### 兄弟节点和父节点
 - 兄弟节点 `nextSibling`、`previousSibling`
