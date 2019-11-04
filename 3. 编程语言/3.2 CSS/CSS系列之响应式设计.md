@@ -2,7 +2,7 @@
 
 ## 响应式设计模式
 
-- 移动优先原则 
+- 移动优先原则
 - 响应式文本列 (CSS3 Muti-column Layout - Responsive Text Column)
 - 没有媒体查询的响应式 Flexbox (Responsive Flexbox without Media Queries)
 - 响应式网格 (Responsive Grids with Grid Template area)
@@ -48,7 +48,7 @@ img {
 }
 ```
 
-这里通过设置 **max-width** 属性为 100% 让元素变得可伸缩，同时又不会超出其固有大小。 
+这里通过设置 **max-width** 属性为 100% 让元素变得可伸缩，同时又不会超出其固有大小。
 
 #### 不具有固定宽高比容器的可伸缩性设计
 
@@ -73,7 +73,7 @@ iframe {
 </div>
 ```
 
-设置容器元素 CSS 代码如下： 
+设置容器元素 CSS 代码如下：
 
 ```css
 .resp-container {
@@ -88,7 +88,7 @@ iframe {
 - `overflow:hidden` 隐藏溢出到容器外面的部分；
 - `padding-top` 使用百分比数值设置 padding 可以确保容器有一个正确的宽高比，因为使用百分比数值设置 padding 其实际值基于包含块的宽度计算。此时，容器的宽度等于包含块的宽度，所以 padding-top 实际值等于容器宽度的 56.25%。
 
-设置 iframe 元素 CSS 代码如下： 
+设置 iframe 元素 CSS 代码如下：
 
 ```css
 .resp-iframe {
@@ -150,7 +150,7 @@ CSS 代码：
 常见的断点
 
 - Phones
-- Portrait Tables 
+- Portrait Tables
 - Landscape Tables
 - Desktop
 
@@ -160,7 +160,7 @@ CSS 代码：
 
 *文件：mixins.scss*
 
-```sass
+```css
 @mixin respond($breakpoint) {
 
   // @content @if 用法
@@ -184,7 +184,7 @@ CSS 代码：
 
 *文件：base.scss*
 
-```sass
+```css
 html {
   font-size: 62.5% // 1rem = 10px
 
@@ -221,7 +221,7 @@ html {
   @media (height > 600px) {
       body { line-height: 1.4; }
   }
-  
+
   @media (400px <= width <= 600px) {
       body { line-height: 1.4; }
   }
@@ -276,13 +276,11 @@ html {
 - 画布溢出模式（Off Canvas）
 - 布局切换器 (Layout Shifter)
 
-
-
 ## 响应式布局策略
 
 ![](https://raw.githubusercontent.com/byodian/logpic/master/Responsive%20Design.png)
 
-- 设计时，定义宽度时，应采用相对宽度，防止元素溢出视窗。 
+- 设计时，定义宽度时，应采用相对宽度，防止元素溢出视窗。
 - CSS 允许内容溢出容器，例如图片等嵌入对象
 
 ### Testing for Browser Suport with @supports
@@ -312,14 +310,54 @@ html {
 
 ![](https://raw.githubusercontent.com/byodian/logpic/master/resonsive%20image.png)
 
-### 美术设计问题和分辨率切换问题 (Art Direction and Density Switching)
+- 美术设计问题
+- 分辨率切换 (Art Direction and Density Switching)
 
-让浏览器提供多个图像文件来实现图片响应式设计，比如使用相同显示效果，多个不同的分辨率的图片 (分辨率切换) ，或者使用不同的图片以适应不同的空间分配 (美术设计)。
+ 提供多个图像文件来实现图片响应式设计。
 
-- How to use the `srcset` attribute on the &lt;img&gt; and &lt;source&gt; elements, together with density descriptions;
 - How to why to use the &lt;picture&gt; element for art direction;
 - How to write media queries in HTML.
 - How to allow the browser to decide the best image to download, using the `srcset` attribute, width descriptors, and the `sizes` attributes of the &lt;img&gt; element.
+
+### 分辨率切换：不同尺寸
+
+使用相同显示效果，多个不同的分辨率的图片。
+
+在 &lt;img&gt; 和 &lt;source&gt; 元素上，使用 `srcset` 属性。
+
+- `srcset` 定义允许浏览器选择图像集，以及图像的固有宽度。
+- `sizes` 定义一组媒体查询条件，并指定图像应该填充的槽宽度。当为真时，加载 `srcset` 列表中与槽宽度最接近的图像。槽宽度单位可使用相对视口单位 `vw`
+
+```html
+<img srcset="avatar-320w.jpg 320w,
+             avatar-480w.jpg 480w,
+             avatar-800w.jpg 800w"
+     sizes="(max-width: 56.25em) 20vw,
+            (max-width: 37.5em) 20vw,
+            300px"
+     src="avatar-800w.jpg" alt="photo">
+```
+
+还有一种支持多分辨率的写法，`scrset` 和 `X` 语法结合，不需要 `sizes` 属性。
+
+```html
+<!-- 1x 是默认值 -->
+<img srcset="avatar-1x.jpg,
+             avatar-2x.jpg 2x,
+             avatar-3x.jpg 3x"
+     src="avatar-800w.jpg" alt="photo">
+```
+
+### 美术设计问题
+
+提供不同的图片以适应不同的空间分配，使用 &lt;picture&gt; 元素可以实现。
+
+```html
+<picture>
+  <source media="(min-width: 56.25em)" srcset="avatar-480w.jpg">
+  <img src="avatar-800w" alt="photo">
+</picture>
+```
 
 ### CSS 图片的响应式设计
 
@@ -343,7 +381,7 @@ html {
 
 - 随着每行字符的减少，行高也可以减少。
 - 屏幕的大小不同，排版的基准尺寸也要调整。[如何为网站设置内容设置合适的文字大小](
- https://trentwalton.com/2012/06/19/fluid-type/) 
+ https://trentwalton.com/2012/06/19/fluid-type/)
 - 使用弹性字体大小。em、rem 及视口单位（vh、vw、vmin和vmax）
 - 设置基准字体大小，需要使用媒体查询修改文本大小。（P240）[可伸缩的排版系统](
   http://typecast.com/blog/a-more-modern-scale-for-web-typography)
