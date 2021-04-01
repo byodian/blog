@@ -26,9 +26,9 @@ React 的 `state hook`
 
 **将对象分配给事件处理中的变量是没有必要的，我们可以将函数简化为如下形式:**
 
-```jsx
-**const handleLeftClick = () => setClicks({ ...clicks, left: clicks.left + 1 })
-const handleRightClick = () => setClicks({ ...clicks, right: clicks.right + 1 })**
+```js
+const handleLeftClick = () => setClicks({ ...clicks, left: clicks.left + 1 })
+const handleRightClick = () => setClicks({ ...clicks, right: clicks.right + 1 })
 ```
 
 The application still appears to work, but don't implement components like this! Never define components inside of other components.
@@ -66,7 +66,7 @@ Web 开发的第一原则：始终打开浏览器的开发控制台。
 
 hook 只能从定义 React component 的函数体内部调用。
 
-```jsx
+```js
 const App = () => {
   // These are ok
   const [age, setAge] = useState(0);
@@ -102,7 +102,7 @@ A custom Hook is a JavaScript function whose name starts with 'use' and that may
 
 input 数据绑定自定义 Hook
 
-```jsx
+```js
 import React, { useState } from 'react'
 
 export const useFields = (type) {
@@ -110,6 +110,7 @@ export const useFields = (type) {
 	const onChange = (event) => {
 		setValue(event.target.value)
 	}
+
 	return {
 		type,
 		value,
@@ -144,13 +145,13 @@ For example, instead of exposing `open()` and `close()` methods on a `Dialo
 
 define a component in React
 
-```jsx
+```js
 const Togglable = () => {}
 ```
 
 Then, like this
 
-```jsx
+```js
 <div>
   <Togglable buttonLabel="1" ref={togglable1}>
     first
@@ -198,11 +199,11 @@ By default, effects run after every completed render, but you can choose to fire
 
 runtime type checking for React props and similar objects
 
-```jsx
+```shell
 npm install --save prop-types
 ```
 
-```jsx
+```js
 import React from 'react';
 import PropTypes from 'prop-types';
 const Togglable = ({ buttonLabel, handleChange }) => {};

@@ -17,7 +17,7 @@
 
  限制：pseudo-classes 不能直接使用
 
-```jsx
+```js
 const Footer = () => {
   const footerStyle = {
     color: 'green',
@@ -69,7 +69,7 @@ React UI  库的优点：
 
 与使用 React Bootstrap 库相比，我们可以直接使用 Bootstrap。方法是为 HTML 元素定义 CSS 类。不需要定义 <Table> 组件。
 
-```jsx
+```js
 // Using React Bootstrap
 <Table striped>
 	//...
@@ -81,13 +81,13 @@ React UI  库的优点：
 
 ### [react-bootstrap](https://react-bootstrap.github.io/)
 
-```jsx
+```js
 npm install react-bootstrap
 ```
 
 在应用的 public/index.html文件中的 head 标签内部添加一个链接，用于加载 Bootstrap 的 CSS 样式表:
 
-```jsx
+```js
 <link
     rel="stylesheet"
     href="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
@@ -98,7 +98,7 @@ npm install react-bootstrap
 
 在 Bootstrap 中，应用的所有内容通常都渲染在一个容器中。 实际上，这是通过给应用的根 div 元素 container class 属性来实现的:
 
-```jsx
+```js
 const App = () => {
 //...
 	return (
@@ -117,7 +117,7 @@ npm install @material-ui/core
 
 在 Container 内渲染整个应用的内容:
 
-```jsx
+```js
 import Container from '@material-ui/core/Container'
 
 const App = () => {

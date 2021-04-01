@@ -142,22 +142,22 @@ padding 属性和 background-clip 属性配合，可以实现一些图像绘制�
 
 - 如果一侧 auto ，则 auto 为剩余空间大小
 - 如果两侧均是 auto ，则平均分配空间。
+```css
+<div class="container">
+    <div class="item"></div>
+</div>
 
-    <div class="container">
-    	<div class="item"></div>
-    </div>
+.container {
+    width: 200px;
+}
 
-    .container {
-    	width: 200px;
-    }
-    
-    .item {
-    	width: 100px;
-    	height: 100px;
-    	margin-right: auto; /* item 左对齐 */
-    }
-
-![https://raw.githubusercontent.com/byodian/logpic/master/margin-left.png](https://raw.githubusercontent.com/byodian/logpic/master/margin-left.png)
+.item {
+    width: 100px;
+    height: 100px;
+    margin-right: auto; /* item 左对齐 */
+}
+```
+![margin-left](https://github.com/byodian/blog/blob/master/doc/margin-left.png?raw=true)
 
     <div class="container">
     	<div class="item"></div>
@@ -170,16 +170,16 @@ padding 属性和 background-clip 属性配合，可以实现一些图像绘制�
     .item {
     	width: 100px;
     	height: 100px;
-    	margin: auto; /* item 左对齐 */
+    	margin: auto; /*  居中对齐 */
     }
 
-![https://raw.githubusercontent.com/byodian/logpic/master/margin.png](https://raw.githubusercontent.com/byodian/logpic/master/margin.png)
+![margin](https://github.com/byodian/blog/blob/master/doc/margin.png?raw=true)
 
 `margin` 属性的 auto 计算控制块级元素的左右对齐，而 `text-align` 控制行内元素的左右对齐。
 
 ### margin: auto 无法实现垂直居中的原因
 
-> If 'margin-top', or 'margin-bottom' are auto, their used value is 0. — w[3.org](https://www.w3.org/TR/CSS2/visudet.html#normal-block)
+> If 'margin-top', or 'margin-bottom' are auto, their used value is 0. — [w3.org](https://www.w3.org/TR/CSS2/visudet.html#normal-block)
 
 - 在正常文档流中，`margin: auto` 在垂直方向的距离为零。
 - 触发 `margin: auto` 计算的一个前提条件，就是 `width` 或 `height` 为 auto 时，元素具有对应方向的自动填充特性。
