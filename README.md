@@ -4,7 +4,7 @@
 
 # 编程学习记录
 
-本博客文章也发布于 [issues][articles-url] 中，欢迎阅读交流。
+本博客文章发布于 [issues][articles-url] 中，欢迎阅读交流。
 
 
 [license-image]: https://img.shields.io/badge/license-CC%20BY--NC--SA-green.svg?style=flat-square
